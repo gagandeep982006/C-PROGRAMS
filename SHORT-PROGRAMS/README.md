@@ -1,1 +1,1 @@
-Here i add some little logical c programs
+Here i add some short logical c programs
