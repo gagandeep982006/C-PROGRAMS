@@ -2,19 +2,18 @@
 #include<math.h>
 
 int main(){
-    int a, digit = 0;
+    int a, digit = 0,copy_a;
     double sum =0;
     printf("Enter your no here: ");
     scanf("%d",&a);
 
-    for(int i = 10,j = 1;;i *=10,j++){
-        if(a/i == 0){
-            digit  = j;
-            break;
-        }
+    copy_a = a;
+    while(copy_a != 0){
+        digit++;
+        copy_a = copy_a/10;
     }
 
-    int copy_a = a;
+    copy_a = a;
     while(copy_a>0){
         sum += pow(copy_a%10,digit);
         copy_a = copy_a/10;
@@ -22,9 +21,9 @@ int main(){
     }
 
     if((int)sum == a)
-        printf("Your given no is amstrong\n");
+        printf("Yes it is a amstrong number\n");
     else
-        printf("Your given no is not amstrong\n");
+        printf("No it is not a amstrong number\n");
 
     return 0;
 }
