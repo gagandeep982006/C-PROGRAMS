@@ -2,16 +2,15 @@
 #include<math.h>
 
 int main(){
-    int number,copy_number,digit;
+    int number,copy_number,digit = 0;
     double sum = 0;
     printf("Enter your no here: ");
     scanf("%d",&number);
 
-    for(int i =10,j = 1;;i *= 10,j++){
-        if(number/i == 0){
-            digit = j;
-            break;
-        }
+    copy_number = number;
+    while(copy_number != 0){
+        digit++;
+        copy_number = copy_number/10;
     }
 
     copy_number = number;
